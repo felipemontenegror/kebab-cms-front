@@ -5,24 +5,21 @@ import { BiHome } from 'react-icons/bi';
 import Layout from '../../components/Layout/index'
 
 const Home = () => {
-  return(
+  return (
       <Layout>
-
-          <HomeContainer>
-              <IconHome /> pagina inicial.
-          </HomeContainer>
-
+              <HomeContainer>
+              <IconHome /> Pagina Inicial
+              </HomeContainer>
       </Layout>
   )
 }
 
 
-
-export default Home
-
-const HomeContainer = styled.div` 
-    background: #ccc
+const HomeContainer = styled.div`
+    background: #ccc;
 `
 const IconHome = styled(BiHome)`
-    color: red
+color: red
 `
+
+export default Home

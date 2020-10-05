@@ -1,38 +1,40 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
+//import {  } from '../../assets/styles/globalStyle'
 
-const Layout = ({ childern }) => {
-    return (
+import Header from './header'
+import Footer from './footer'
+
+
+const Layout = ({children}) => {
+    return(
         <>
-            <Header />
-            <Content>
-                {childern}
-            </Content>
-            <Footer />
+            <HeaderContainer>
+                <Header />
+            </HeaderContainer>
+                <Content>
+                    {children}
+                </Content>
+            <FooterContainer>
+                <Footer />
+            </FooterContainer>
         </>
     )
 }
 
-const Header = styled.div`
-    background: blue;
+
+const HeaderContainer =styled.div`
+
+`
+const Content = styled.div`
+    background: #8A2BE2;
+    min-height: 400px;
+`
+
+const FooterContainer = styled.div`
+    background: #000000;
     height: 200px;
     width: 100%;
-    
 `
- 
-
-const Content = styled.div`
-    background: pink;
-    min-height: 500px;
-`
-
-
-const Footer = styled.div`
-    background: green;
-    height: 200px;
-    width: 100%
-`
-
-
 
 export default Layout
