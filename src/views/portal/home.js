@@ -14,6 +14,7 @@ const Home = () => {
   )
 }
 
+export default Home
 
 const HomeContainer = styled.div`
     background: #ccc;
@@ -22,4 +23,4 @@ const IconHome = styled(BiHome)`
 color: red
 `
 
-export default Home
+

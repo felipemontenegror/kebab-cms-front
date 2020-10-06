@@ -9,33 +9,30 @@ export default () => {
             <Container>
                 <FooterInfo>
                     <Row>
-                        <Col md={3}>
+                        <Col md={5}>
                             <div className="title">Sobre Nós</div>
                             <div className="aboutUs">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis non lorem in dapibus. Proin et felis fermentum, dapibus ante.
+                                <p>Dürum kebabs no pão saj feito na hora, chips, laricas e viagens degustativas na caixinha.</p>
                             </div>   
 
                         </Col>
                         <Col md={4}>
-                            <div className="title">Sobre Nós</div>
-                            <div className="bg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis non lorem in dapibus. Proin et felis fermentum, dapibus ante.
-                            </div> 
-
-                        </Col>
-                        <Col md={2}>
-                            <div className="title">Sobre Nós</div>
-                            <div className="bg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis non lorem in dapibus. Proin et felis fermentum, dapibus ante.
+                            <div className="title">Funcionamento</div>
+                            <div className="open">
+                                <div>Rua Capitão Salmão, 48 - Humaitá, RJ</div>
+                                <div>De Terça à domingo, das 19:00 às 02:00</div>
                             </div> 
 
                         </Col>
                         <Col md={3}>
-                            <div className="title">Sobre Nós</div>
-                            <div className="bg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis non lorem in dapibus. Proin et felis fermentum, dapibus ante.
+                            <div className="title">Área de entrega</div>
+                            <div className="delivery">
+                                <div className ="block-23 mb-2"></div>
+                                <div>Zona Sul</div>
+                                <div>Centro</div>
+                                <div>Grande Tijuca</div>
                             </div> 
-
+                        <br></br>
                         </Col>
                     </Row>
                 </FooterInfo>
@@ -47,7 +44,7 @@ export default () => {
                         <AiFillTwitterSquare />
                     </FooterSocial>
                     <FooterCopy>
-                        All rights reserved
+                        Visite nosas Redes Sociais - All rights reserved
                     </FooterCopy>
                 </Row>
             </Container>
@@ -59,25 +56,39 @@ export default () => {
 const Footer = styled.div`
     background: #111;
     padding: 15px 0;
-    color: #eee
+    color: #eee;
+    border-top: 1px solid #eee
 `
 
 
 
 const FooterInfo = styled.div`
     .title{
-        font-size: 20px;
-        font-weight: 600;
-        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 0;
         border-bottom: thin solid #8A2BE2;
-        color: #8A2BE2
+        margin-bottom: 10px;
+        color: #eee;
 
     }
 `
 const FooterSocial = styled.div`
-    width: 800%;
+    cursor: pointer;    
+    width: 100%;
+    border-bottom: 1px dotted #8A2BE2;
+    padding: 5px;
+    svg {
+        margin: 2px;
+        font-size: 22px;
+        :hover{
+        color: #8A2BE2;
+    }
+
+    }
 `
 const FooterCopy = styled.div`
-    width: 800%;
+    width: 100%;
+    padding: 10px;
 
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import logo from '../../assets/img/logo.png'
+import {Link} from 'react-router-dom'
 
 export default () => {
 
@@ -46,13 +47,15 @@ export default () => {
                     <Logo>
                     <img className="logo" src={logo} alt="Logo" />
                     <span>Cozinha Mandala - O Original Kebab</span>
-                    </Logo>
+                    </Logo> 
                         </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>
                             {menu.map((item, i) => ( 
+                                <Link to={item.link}>
                                 <Nav.Link key={i} href="#home">{item.title}</Nav.Link> 
+                                </Link>
                             ))}
                         </Nav>
                     </Navbar.Collapse>
@@ -68,7 +71,13 @@ export default () => {
 const Header = styled.div`
     background-color: #111;
 
+    .nav-link:hover{  
+        color: #8A2BE2 !important; 
+        font-weight: 500;
+    }
+
 `
+// #fac564 trocar 
 
 const Logo = styled.div`
 font-size: 20px;
@@ -84,7 +93,7 @@ img {
     span {
         color: white;
         margin-left: 15px;
-        font-size: 20px;
+        font-size: 30px;
         text-align: center;
         letter-spacing: 3px;
     }
