@@ -1,21 +1,18 @@
 import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom' //roteamento aninhado de rotas declaradas
+
+import Portal from './views/portal'
+import Admin from './views/admin'
+
 import history from './config/history'
-import {
-    Home,
-
-    Dash as AdminDash
-} from './views'
-
-
 
 const Routers = () => (
     <Router history={history}> 
         <Switch> 
-            <Route exact component={Home} path="/"/>
-            <Route component={AdminDash} path="/admin"/>
+            <Route component={Admin} path="/admin"/>
+            <Route component={Portal} path="/"/>
         </Switch> 
-    </Router> //rota para todos ('/') acessarem a home -- rota apenas para admin (/admin) -- o exact serve para nao comparar com a fota anterior 
+    </Router> // sub rota para todos ('/') acessarem a home -- rota apenas para admin (/admin) -- o exact serve para nao comparar com a fota anterior 
 
 )
 

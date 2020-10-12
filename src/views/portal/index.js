@@ -1,12 +1,16 @@
 import React from 'react'
-import Home from './home'
-import About from './about'
+import { Route } from 'react-router-dom'
 import Layout from '../../components/Layout/index'
 
-export default () =>{
-    return(
-        <Layout>
+import Home from './home'
+import About from './about'
 
+
+export default (props) =>{
+    return(
+        <Layout> 
+            <Route exact basename={props.match.path} path={props.match.path + '/'} component={Home} />
+            <Route exact basename={props.match.path} path={props.match.path + '/sobre'} component={About} /> 
         </Layout>
     )
 }
