@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const InfoHome = () => {
     return (
         <Info>
+            Info
         </Info>
     )
 }

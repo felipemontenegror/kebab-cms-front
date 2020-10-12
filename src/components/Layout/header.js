@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import logo from '../../assets/img/logo.png'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 export default () => {
 
@@ -10,31 +10,31 @@ export default () => {
         {
             title: "Home",
             link: '',
-            icon: ''
+ 
 
         },
         {
             title: "Sobre",
-            link: '',
-            icon: ''
+            link: 'sobre',
+
 
         },
         {
             title: "Produtos",
-            link: '',
-            icon: ''
+            link: '/produtos',
+ 
 
         },
         {
             title: "Serviços",
-            link: '',
-            icon: ''
+            link: 'servicos',
+
 
         },
         {
             title: "Contato",
-            link: '',
-            icon: ''
+            link: 'contato',
+
 
         },
 
@@ -53,9 +53,9 @@ export default () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>
                             {menu.map((item, i) => ( 
-                                <Link to={item.link}>
-                                <Nav.Link key={i} href="#home">{item.title}</Nav.Link> 
-                                </Link>
+                                <NavLink to={item.link} key={i}>
+                                    <Nav.Link href="#home">{item.title}</Nav.Link> 
+                                </NavLink>
                             ))}
                         </Nav>
                     </Navbar.Collapse>
@@ -77,7 +77,6 @@ const Header = styled.div`
     }
 
 `
-// #fac564 trocar 
 
 const Logo = styled.div`
 font-size: 20px;
@@ -99,3 +98,6 @@ img {
     }
 
 `
+// <NavLink exact={true} to={item.link} key={i}>
+//<Nav.Link as="div">{item.title}</Nav.Link>
+// </NavLink>

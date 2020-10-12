@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const BannerHome = () => {
     return (
         <Banner>
+            Banner
         </Banner>
     )
 }

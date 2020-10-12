@@ -12,9 +12,9 @@ const Layout = ({children}) => {
             <HeaderContainer>
                 <Header />
             </HeaderContainer>
-                <Content>
-                    {children}
-                </Content>
+            <Content>
+                {children}
+            </Content>
             <FooterContainer>
                 <Footer />
             </FooterContainer>
@@ -23,7 +23,7 @@ const Layout = ({children}) => {
 }
 
 
-const HeaderContainer =styled.div`
+const HeaderContainer = styled.div`
 
 `
 const Content = styled.div`
